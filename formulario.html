@@ -3,48 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Cuenta | Digital Wine</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-     <nav>
-            <ul>
-                <li><a href="index.html">Bienvenida</a></li>
-                <li><a href="articulo.html">Articulos</a></li>
-                <li><a href="formulario.html">Registrarse</a></li>
-                <li><a href="encuesta.html">Encuesta</a></li>
-                <li><a href="#Contacto">Contactos</a></li>
-            </ul>
-        </nav>
-        <main>
-            <form action="#" method="post">
-                <label for="nombre"> Nombre completo:</label><br>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="informate.html">Atención al Cliente</a></li>
+            <li><a href="blog.html">Historia</a></li>
+            <li><a href="productos.html">Variedades</a></li>
+            <li><a href="lista.html">Tienda Online</a></li>
+            <li><a href="formulario.html" class="activo">Mi Cuenta</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="Logo-Global">
+        <img src="imagenes/diseño.png" alt="Digital Wine Logo">
+    </div>
+
+    <main class="cuenta-main">
+        
+        <div class="cuenta-texto">
+            <h1>CREAR <br><span>CUENTA</span></h1>
+            <p class="cuenta-descripcion">
+                Regístrate para acceder a nuestro catálogo, realizar compras y
+                gestionar tus pedidos en <strong>Digital Wine</strong>.
+            </p>
+            
+            <p class="login-link">
+                ¿Ya tienes cuenta? 
+                <a href="login.html">Inicia sesión aquí</a>
+            </p>
+        </div>
+
+        <form id="formRegistro">
+            <div class="campo">
+                <label for="nombre">Nombre completo:</label>
                 <input type="text" id="nombre" name="nombre" required>
-                <br><br>
+            </div>
 
-                <label for="correo">Correo electronico</label><br>
+            <div class="campo">
+                <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" name="correo" required>
-                <br><br>
+            </div>
 
-                <label for="usuario">Nombre de Usuario:</label><br>
-                <input type="text" id="usuario" name="usuario" requiered minlength="4" maxlength="15">
-                <br><br>
+            <div class="campo">
+                <label for="telefono">Número de teléfono:</label>
+                <input 
+                    type="tel" 
+                    id="telefono" 
+                    name="telefono" 
+                    required 
+                    pattern="[0-9]{9}" 
+                    placeholder="Ej: 987654321">
+            </div>
 
-                <label for="password"> Contraseña:</label><br>
+            <div class="campo">
+                <label for="usuario">Nombre de usuario:</label>
+                <input type="text" id="usuario" name="usuario" required minlength="4" maxlength="15">
+            </div>
+
+            <div class="campo">
+                <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" required minlength="6" maxlength="12" placeholder="6 a 12 caracteres">
-                <br><br>
+            </div>
 
-                <label for="confirmar"> Confirma contraseña:</label><br>
+            <div class="campo">
+                <label for="confirmar">Confirmar contraseña:</label>
                 <input type="password" id="confirmar" name="confirmar" required minlength="6" maxlength="12">
-                <br><br>
+            </div>
 
-                <label>
-                    <input type="checkbox" name="terminos" required> Acepto los terminos y condiciones
-                </label><br><br>
+            <label class="terminos">
+                <input type="checkbox" required>
+                Acepto los términos y condiciones
+            </label>
 
-                <input type="submit" value="Registrarse">
-                <input type="reset" value="Restablecer">
-            </form>
-        </main>
+            <div class="botones-container">
+                <input type="submit" value="Registrarse" class="btn-registrar">
+                <input type="reset" value="Restablecer" class="btn-reset">
+            </div>
+        </form>
+
+    </main>
+    <footer id="Contacto">
+        <p>📍 Arequipa, Perú</p>
+        <p> <a href="tel:+51999888777" style="color: inherit; text-decoration: none;">📞 +51 999 888 777</a></p>
+        <p><a href="mailto:contacto@digitalwine.com" style="color: inherit; text-decoration: none;">✉️ contacto@digitalwine.com</a></p>
+        <p><a href="https://www.instagram.com" target="_blank" style="color: inherit; text-decoration: none;"><img src="imagenes/Instagram.png" alt="Instagram">@digital.wine.pe</a></p>
+        <p><a href="https://www.facebook.com" target="_blank" style="color: inherit; text-decoration: none;"><img src="imagenes/facebook.png" alt="Facebook">Digital Wine Perú</a></p>
+        <p><a href="https://www.tiktok.com" target="_blank" style="color: inherit; text-decoration: none;"><img src="imagenes/tiktok.png" alt="Tiktok">@digitalwine.pe</a></p>
+    </footer>
+
+    <a href="https://wa.me/51944214835?text=%C2%A1Hola!%20%F0%9F%98%8A%20Bienvenido%20a%20Digital%20Wine.%20En%20un%20momento%20te%20atendemos%20para%20brindar%20juntos%20%F0%9F%8D%B7"" 
+   target="_blank" 
+   class="btn-whatsapp">
+    <img src="imagenes/icono.png" alt="WhatsApp">
+</a>
+    <script src="js/registro.js"></script>
+
 </body>
 </html>

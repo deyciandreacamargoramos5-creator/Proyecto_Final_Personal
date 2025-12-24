@@ -3,53 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/lista.css">
+    <title>Digital Wine | Catálogo Premium</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-        <nav>
-            <ul>
-                <li><a href="index.html">Bienvenida</a></li>
-                <li><a href="lista.html">Lista de vinos</a></li>
-                <li><a href="articulo.html">Articulos</a></li>
-                <li><a href="formulario.html">Registrarse</a></li>
-                <li><a href="encuesta.html">Encuesta</a></li>
-                <li><a href="#Contacto">Contactos</a></li>
-            </ul>
-        </nav>
 
-    <h1>LISTA DE VINOS</h1>
-    <table border="1">
-        <tr>
-            <th>VINO</th>
-            <th>BODEGA</th>
-            <th>REGIÓN</th>
-            <th>AÑO</th>
-        </tr>
-        <tr>
-            <td>Intipalka Malbec</td>
-            <th>Viña Tacama</th>
-            <th>Majes</th>
-            <th>2021</th>
-        </tr>
-        <tr>
-            <td>Queirolo Reserva</td>
-            <th>Bodega Queirolo</th>
-            <th>Vitor</th>
-            <th>2020</th>
-        </tr>
-        <tr>
-            <td>Tacama Seleccion Especial</td>
-            <th>Viña Tacama</th>
-            <th>Majes</th>
-            <th>2019</th>
-        </tr>
-        <tr>
-            <td>Victor Vino Blanco</td>
-            <th>Bodega Victor</th>
-            <th>Vítor</th>
-            <th>2022</th>
-        </tr>
-    </table>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+            <li><a href="informate.html">Atención al Cliente</a></li>
+            <li><a href="blog.html">Historia</a></li>
+            <li><a href="productos.html">Variedades</a></li>
+            <li><a href="lista.html">Tienda Online</a></li>
+            <li><a href="formulario.html">Mi Cuenta</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+<div class="Logo-Global">
+    <img src="imagenes/diseño.png" alt="Digital Wine Logo">
+</div>
+
+<header class="catalog-header">
+    <h1>Catálogo de Vinos y Precios</h1>
+    <p>Selección exclusiva de las mejores bodegas</p>
+</header>
+
+<main class="container-main">
+
+<section class="products-grid">
+        
+        <div class="wine-card">
+            <span class="tag">Tinto</span>
+            <div class="img-container"><img src="imagenes/Hannan.png" alt="Tacama Hannan"></div>
+            <div class="info">
+                <h3>Tacama Hannan Tannat</h3>
+                <p class="bodega">Tacama / Hannan</p>
+                <p class="price">S/. 199.90</p>
+                <button onclick="agregarCarrito('Tacama Hannan', 199.90)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="wine-card">
+            <span class="tag">Tinto</span>
+            <div class="img-container"><img src="imagenes/Intipalka.png" alt="Intipalka"></div>
+            <div class="info">
+                <h3>Intipalka N°1</h3>
+                <p class="bodega">Viñas Queirolo</p>
+                <p class="price">S/. 131.00</p>
+                <button onclick="agregarCarrito('Intipalka N°1', 131)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="wine-card">
+            <span class="tag">Tinto</span>
+            <div class="img-container"><img src="imagenes/DonManuel.png" alt="Don Manuel"></div>
+            <div class="info">
+                <h3>Tacama Don Manuel</h3>
+                <p class="bodega">Tacama</p>
+                <p class="price">S/. 103.00</p>
+                <button onclick="agregarCarrito('Don Manuel', 103)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="wine-card">
+            <span class="tag white">Blanco</span>
+            <div class="img-container"><img src="imagenes/Hannan.Blanc.png" alt="Hannan Blanc"></div>
+            <div class="info">
+                <h3>Tacama Hannan S. Blanc</h3>
+                <p class="bodega">Tacama</p>
+                <p class="price">S/. 170.00</p>
+                <button onclick="agregarCarrito('Hannan Blanc', 170)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="wine-card">
+            <span class="tag">Tinto</span>
+            <div class="img-container"><img src="imagenes/BlendIsabel.png" alt="Blend Isabel"></div>
+            <div class="info">
+                <h3>Blend Isabel</h3>
+                <p class="bodega">Finca Rotondo</p>
+                <p class="price">S/. 75.10</p>
+                <button onclick="agregarCarrito('Blend Isabel', 75.10)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="wine-card">
+            <span class="tag white">Blanco</span>
+            <div class="img-container"><img src="imagenes/Blanco.png" alt="Blanco"></div>
+            <div class="info">
+                <h3>Gran Vino Blanco</h3>
+                <p class="bodega">Tacama</p>
+                <p class="price">S/. 105.00</p>
+                <button onclick="agregarCarrito('Gran Vino Blanco', 105)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="wine-card">
+            <span class="tag">Tinto</span>
+            <div class="img-container"><img src="imagenes/CondeCabernet.png" alt="Conde"></div>
+            <div class="info">
+                <h3>Conde Cabernet</h3>
+                <p class="bodega">Paz-Soldán</p>
+                <p class="price">S/. 110.00</p>
+                <button onclick="agregarCarrito('Conde Cabernet', 110)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="wine-card">
+            <span class="tag">Tinto</span>
+            <div class="img-container"><img src="imagenes/PetitVerdot.png" alt="Petit Verdot"></div>
+            <div class="info">
+                <h3>Petit Verdot</h3>
+                <p class="bodega">Tacama</p>
+                <p class="price">S/. 75.00</p>
+                <button onclick="agregarCarrito('Petit Verdot', 75)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="wine-card">
+            <span class="tag">Tinto</span>
+            <div class="img-container"><img src="imagenes/EspecialMalbec.png" alt="Malbec"></div>
+            <div class="info">
+                <h3>Malbec Especial</h3>
+                <p class="bodega">Tacama</p>
+                <p class="price">S/. 46.00</p>
+                <button onclick="agregarCarrito('Malbec', 46)">Agregar</button>
+            </div>
+        </div>
+
+        <div class="wine-card">
+            <span class="tag">Tinto</span>
+            <div class="img-container"><img src="imagenes/FincaRotondo.png" alt="Rotondo"></div>
+            <div class="info">
+                <h3>Finca Rotondo</h3>
+                <p class="bodega">Finca Rotondo</p>
+                <p class="price">S/. 45.00</p>
+                <button onclick="agregarCarrito('Finca Rotondo', 45)">Agregar</button>
+            </div>
+        </div>
+
+    </section>
+
+<aside class="cart-sidebar">
+    <div class="cart-box">
+        <h3>🛒 Tu Carrito</h3>
+        <ul id="lista-carrito"></ul>
+        <div class="cart-footer">
+            <p>Total: <strong>S/. <span id="total">0.00</span></strong></p>
+            <button class="btn-clear" onclick="vaciarCarrito()">Vaciar</button>
+            <button class="btn-pay" onclick="irAPago()">Pagar</button>
+        </div>
+    </div>
+</aside>
+
+</main>
+
+<footer id="Contacto">
+    <p>📍 Arequipa, Perú</p>
+    <p> <a href="tel:+51999888777" style="color: inherit; text-decoration: none;">📞 +51 999 888 777</a></p>
+    <p><a href="mailto:contacto@digitalwine.com" style="color: inherit; text-decoration: none;">✉️ contacto@digitalwine.com</a></p>
+    <p><a href="https://www.instagram.com" target="_blank" style="color: inherit; text-decoration: none;"><img src="imagenes/Instagram.png" alt="Instagram">@digital.wine.pe</a></p>
+    <p><a href="https://www.facebook.com" target="_blank" style="color: inherit; text-decoration: none;"><img src="imagenes/facebook.png" alt="Facebook">Digital Wine Perú</a></p>
+    <p><a href="https://www.tiktok.com" target="_blank" style="color: inherit; text-decoration: none;"><img src="imagenes/tiktok.png" alt="Tiktok">@digitalwine.pe</a></p>
+</footer>
+    <a href="https://wa.me/51944214835?text=%C2%A1Hola!%20%F0%9F%98%8A%20Bienvenido%20a%20Digital%20Wine.%20En%20un%20momento%20te%20atendemos%20para%20brindar%20juntos%20%F0%9F%8D%B7"" 
+   target="_blank" 
+   class="btn-whatsapp">
+    <img src="imagenes/icono.png" alt="WhatsApp">
+</a>
+<script src="js/carrito.js"></script>
+
+
 </body>
 </html>

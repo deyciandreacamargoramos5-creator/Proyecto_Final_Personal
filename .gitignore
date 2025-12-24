@@ -1,0 +1,13 @@
+# Base de datos local y configuraciones (IMPORTANTE)
+instance/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Por si quedó algún rastro de node_modules
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

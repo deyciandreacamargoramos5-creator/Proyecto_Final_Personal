@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pago - Digital Wine</title>
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <ul>
+       <li><a href="index.html">Home</a></li>
+            <li><a href="informate.html">Atención al Cliente</a></li>
+            <li><a href="blog.html">Historia</a></li>
+            <li><a href="productos.html">Variedades</a></li>
+            <li><a href="lista.html">Tienda Online</a></li>
+            <li><a href="formulario.html">Mi Cuenta</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+<div class="Logo-Global">
+    <img src="imagenes/diseño.png" alt="Digital Wine Logo">
+</div>
+<h1>Finalizar Compra</h1>
+
+<section class="checkout">
+  <h2>Resumen del pedido</h2>
+  <ul id="resumen"></ul>
+  <p>Total a pagar: <strong>S/. <span id="total-pago">0.00</span></strong></p>
+
+  <h2>Datos del cliente</h2>
+  <input type="text" placeholder="Nombre completo">
+  <input type="text" placeholder="Dirección">
+  <input type="text" placeholder="Teléfono">
+
+  <h2>Método de pago</h2>
+
+  <label><input type="radio" name="pago" value="tarjeta" checked onclick="abrirPago('tarjeta')">Tarjeta</label><br>
+  <label><input type="radio" name="pago" value="yape" onclick="abrirPago('yape')">Yape / Plin</label><br>
+  <label><input type="radio" name="pago" value="entrega" onclick="cerrarModales()">Contra entrega</label>
+
+  <!-- BOTÓN FINAL -->
+  <button onclick="pagar()">Pagar</button>
+</section>
+
+<!-- MODAL TARJETA -->
+<div id="modal-tarjeta" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModales()"></span>
+    <h3>Pago con Tarjeta</h3>
+
+    <input type="text" id="tarjeta-numero" placeholder="Número de tarjeta" maxlength="16">
+
+    <div class="modal-row">
+      <input type="text" id="tarjeta-fecha" placeholder="MM/AA">
+      <input type="text" id="tarjeta-cvv" placeholder="CVV" maxlength="3">
+    </div>
+
+    <button class="btn-pay" onclick="validarTarjeta()">Confirmar</button>
+  </div>
+</div>
+
+<!-- MODAL YAPE -->
+<div id="modal-yape" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModales()"></span>
+    <h3>Pago con Yape / Plin</h3>
+
+    <input type="text" id="yape-celular" placeholder="Número de celular" maxlength="9">
+    <input type="text" id="yape-codigo" placeholder="Código de verificación">
+
+    <button class="btn-pay" onclick="validarYape()">Confirmar</button>
+  </div>
+</div>
+
+<!-- MODAL CONFIRMACIÓN FINAL -->
+<div id="modal-confirmacion" class="modal">
+  <div class="modal-content confirmacion">
+    <h3 id="titulo-confirmacion"></h3>
+    <p id="mensaje-confirmacion"></p>
+
+    <img src="imagenes/camion.png" alt="Pedido en camino" class="img-camion">
+
+    <button class="btn-pay" onclick="finalizarPedido()">Finalizar pedido</button>
+  </div>
+</div>
+
+<footer id="Contacto">
+    <p>📍 Arequipa, Perú</p>
+    <p> <a href="tel:+51999888777" style="color: inherit; text-decoration: none;">📞 +51 999 888 777</a></p>
+    <p><a href="mailto:contacto@digitalwine.com" style="color: inherit; text-decoration: none;">✉️ contacto@digitalwine.com</a></p>
+    <p><a href="https://www.instagram.com" target="_blank" style="color: inherit; text-decoration: none;"><img src="imagenes/Instagram.png" alt="Instagram">@digital.wine.pe</a></p>
+    <p><a href="https://www.facebook.com" target="_blank" style="color: inherit; text-decoration: none;"><img src="imagenes/facebook.png" alt="Facebook">Digital Wine Perú</a></p>
+    <p><a href="https://www.tiktok.com" target="_blank" style="color: inherit; text-decoration: none;"><img src="imagenes/tiktok.png" alt="Tiktok">@digitalwine.pe</a></p>
+</footer>
+
+    <a href="https://wa.me/51944214835?text=%C2%A1Hola!%20%F0%9F%98%8A%20Bienvenido%20a%20Digital%20Wine.%20En%20un%20momento%20te%20atendemos%20para%20brindar%20juntos%20%F0%9F%8D%B7"" 
+   target="_blank" 
+   class="btn-whatsapp">
+    <img src="imagenes/icono.png" alt="WhatsApp">
+</a>
+<!-- SCRIPTS -->
+<script src="js/pago.js"></script>
+<script src="js/modeloPago.js"></script>
+
+
+
+</body>
+</html>
